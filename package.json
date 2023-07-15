@@ -1,0 +1,35 @@
+{
+  "name": "fastify-api-clerk-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fastify API Clerk Example",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "dev:watch": "tsx watch src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "start": "NODE_ENV=production node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandre Marques",
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "4.10.15",
+    "@clerk/fastify": "0.5.7",
+    "@fastify/compress": "6.4.0",
+    "@fastify/cors": "8.3.0",
+    "@fastify/helmet": "11.0.0",
+    "dotenv": "16.3.1",
+    "fastify": "4.19.2",
+    "http-errors": "2.0.0",
+    "zod": "3.21.4"
+  },
+  "devDependencies": {
+    "@types/http-errors": "2.0.1",
+    "@types/node": "20.4.2",
+    "tsx": "3.12.7",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
