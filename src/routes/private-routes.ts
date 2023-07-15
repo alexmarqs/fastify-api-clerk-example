@@ -4,8 +4,7 @@ import createHttpError from 'http-errors'
 
 export const privateRoutes = async (fastify: FastifyInstance) => {
   fastify.register(clerkPlugin)
-  fastify.decorateRequest('userId', '') // decorate request with a 'user' property
-
+  fastify.decorateRequest('userId', '')
   fastify.addHook('preHandler', (request, _reply, done) => {
     const { userId } = getAuth(request)
 
@@ -26,7 +25,6 @@ export const privateRoutes = async (fastify: FastifyInstance) => {
     }
 
     // Do something with the user
-    request.log.info(user)
 
     return {
       message: `Hello ${user.firstName} from the private World!`,
